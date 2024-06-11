@@ -5,9 +5,18 @@ class Turntext extends StatelessWidget {
   final String turn;
   @override
   Widget build(BuildContext context) {
-    return Text("It is $turn's turn to play.....",
-    style: const TextStyle(
-      fontSize: 20,
-    ),);
+    return RichText(
+      text: TextSpan(
+        style: const TextStyle(
+          fontSize: 24.0,
+          color: Colors.black,
+        ),
+        children: <TextSpan>[
+          const TextSpan(text: 'It is '),
+          TextSpan(text: turn, style: TextStyle(fontWeight: FontWeight.bold,color: turn=="O" ?Colors.red[800] :Colors.blue[800] )),
+          const TextSpan(text: "'s turn to play...."),
+        ],
+      ),
+    );
   }
 }

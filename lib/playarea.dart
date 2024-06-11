@@ -19,7 +19,8 @@ class Playarea extends StatelessWidget {
               for(int j=0;j<3;j++)
                 StyledButton(arr,turn,setClicked,i,j,isDone)
             ],
-          )
+          ),
+          // const SizedBox()
       ],
     );
   }
